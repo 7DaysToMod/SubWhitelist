@@ -1,0 +1,30 @@
+﻿<div class="row">
+	<div class="col-md-12">&nbsp;</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h2>Sub Whitelist Settings</h2>
+		<form method="POST" action="/settings/subwhitelist">
+			{settings_forms}
+
+			<button type="submit" class="btn btn-primary">Save</button>
+		</form>
+	</div>
+</div>
+<script language="javascript">
+	function allowProviderOnChange(providerName){
+		if($("#allow_"+providerName).is(":checked")){
+			$("#providersettings_"+providerName).show();
+		}else{
+			$("#providersettings_"+providerName).hide();
+		}
+	}
+
+	$(document).ready(function(){
+		var providerList = [{quoted_provider_list}];
+
+		for(var i in providerList){
+			allowProviderOnChange(providerList[i]);
+		}
+	});
+</script>

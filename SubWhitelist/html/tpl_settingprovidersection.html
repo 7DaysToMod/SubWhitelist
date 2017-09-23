@@ -1,0 +1,11 @@
+﻿<div class="jumbotron" style="padding:1rem;1rem;">
+	<div class="form-group">
+	    <label class="form-check-label">
+		    <input class="form-check-input" type="checkbox" {allow_{provider_name}_checked} name="allow_{provider_name}" id="allow_{provider_name}" onChange="allowProviderOnChange('{provider_name}');">
+		    {provider_allow_description}
+		</label>
+	</div>
+	<div id="providersettings_{provider_name}">
+		{provider_form}
+	</div>
+</div>
